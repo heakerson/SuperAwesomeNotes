@@ -1,0 +1,26 @@
+<div id="CreateContainer">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-5">
+      <div class="border rounded mt-5 p-4 bg-primary text-light">
+        <h4 class="mb-4">CREATE NEW NOTE</h4>
+
+        <div class="form-group">
+          <label for="noteTitle">Note Title</label>
+          <input [(ngModel)]="Title" type="text" class="form-control" id="noteTitle" aria-describedby="title" placeholder="title here...">
+        </div>
+
+        <div class="form-group">
+          <label for="ContentArea">Note Content</label>
+          <!-- <input [(ngModel)]="Content" type="text" class="form-control" id="noteContent" placeholder="content here..."> -->
+          <textarea [(ngModel)]="Content" id="ContentArea" rows="4" placeholder="content here..." class="form-control"></textarea>
+        </div>
+
+        <div class="d-flex flex-row mt-5">
+            <button type="submit" (click)="CreateNote()" routerLink="/Search" class="btn btn-danger text-white font-weight-bold ml-auto">Save</button>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

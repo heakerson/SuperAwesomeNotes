@@ -1,0 +1,12 @@
+.note {
+    background-color: white;
+}
+
+.note:hover{
+    background-color: yellow !important;
+    cursor: pointer;
+}
+
+.btn-outline-info:hover{
+    color: white !important;
+}

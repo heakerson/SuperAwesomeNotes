@@ -1,0 +1,22 @@
+<div id="NoteContainer">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-5">
+        <div class="border rounded mt-5 p-4 bg-primary text-light">
+          <h3 class="mb-4">{{Note.Title}}</h3>
+  
+          <h1 class="text-warning">{{Note.Content}}</h1>
+
+          <div class="divider"></div>
+
+          <hr class="mt-4">
+
+          <div class="d-flex flex-row mt-4">
+              <button type="submit" class="btn btn-danger text-white font-weight-bold ml-auto" routerLink="/Search">Back to Search</button>
+              <button type="submit" class="btn btn-danger text-white font-weight-bold ml-2" routerLink="/Edit/{{Note.Id}}">Edit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>

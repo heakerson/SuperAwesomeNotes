@@ -1,0 +1,29 @@
+<div id="SearchContainer">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-5">
+          <div class="border rounded mt-5 p-4 bg-primary text-light">
+              <div class="d-flex flex-row mb-4">
+                  <button routerLink="/Create" class="btn btn-danger text-white font-weight-bold w-100 p-3"><h4>Create New Note</h4></button>
+              </div>
+            <h4 class="mb-4">SEARCH NOTES</h4>
+    
+            <div class="form-group mb-5">
+              <input (keyup)="Filter()" [(ngModel)]="SearchTerm" type="text" class="form-control" id="searchTerm" aria-describedby="search">
+            </div>
+    
+            <h4 class="mb-4">FILTERED NOTES</h4>
+            <div *ngFor="let note of FilteredNotes">
+              <div class="rounded text-dark p-2 mt-2 d-flex flex-row align-items-center note" routerLink="/Note/{{note.Id}}">
+                  <span class="font-weight-bold ml-1 mr-3">TITLE:</span>
+                  <span>{{note.Title}}</span>
+                  <button routerLink="/Edit/{{note.Id}}" class="btn btn-outline-info text-info font-weight-bold ml-auto">EDIT</button>
+                  <button (click)="DeleteNote(note)" class="btn btn-outline-danger font-weight-bold ml-2">DELETE</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+</div>
